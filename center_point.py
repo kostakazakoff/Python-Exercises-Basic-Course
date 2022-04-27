@@ -6,8 +6,12 @@ s2 = float(input())
 
 def nearest_to_center(x1, y1, x2, y2):
     import math
+    
+    # results for output
     point1_result = tuple(math.floor(x) for x in [x1, y1])
     point2_result = tuple(math.floor(x) for x in [x2, y2])
+    
+    # Calculating the points distance from the center of the coordinate system (finding the nearest to the center, if equal - result is the first one):
     point1_distance = abs(x1) ** 2 + abs(y1) ** 2
     point2_distance = abs(x2) ** 2 + abs(y2) ** 2
     if point2_distance < point1_distance:
