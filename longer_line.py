@@ -11,18 +11,18 @@ y4 = float(input())
 def longer_line(l1_x1, l1_y1, l1_x2, l1_y2, l2_x1, l2_y1, l2_x2, l2_y2):
     import math
     
-    # define a point coordinates:
+    # define the point coordinates:
     p1 = [l1_x1, l1_y1]
     p2 = [l1_x2, l1_y2]
     p3 = [l2_x1, l2_y1]
     p4 = [l2_x2, l2_y2]
     
     # First line:
-    # calculate a points distance from the center of the Cartesian coordinate system:
+    # calculate the points distance from the center of the Cartesian coordinate system:
     point1_distance = abs(p1[0]) ** 2 + abs(p1[1]) ** 2
     point2_distance = abs(p2[0]) ** 2 + abs(p2[1]) ** 2
     
-    # define a line direction (nearest to 0,0 point is the start point):
+    # define the line direction (nearest to 0,0 point is the start point):
     if point2_distance < point1_distance:
         line_1 = [p2, p1]
     else:
