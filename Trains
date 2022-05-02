@@ -1,0 +1,22 @@
+number_of_wagons = int(input())
+train = ''
+train = list(map(int, train.zfill(number_of_wagons)))
+command = input()
+
+while command != 'End':
+    command = command.split()
+    action = command[0]
+    people = int(command[-1])
+    if action == 'add':
+        train[-1] += people
+    elif action == 'insert':
+        wagon = int(command[1])
+        train[wagon] += people
+    elif action == 'leave':
+        wagon = int(command[1])
+        train[wagon] -= people
+        if train[wagon] < 0:
+            train[wagon] = 0
+    command = input()
+
+print(train)
