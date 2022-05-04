@@ -1,23 +1,21 @@
-tournaments_number = int(input())
-start_points = int(input())
-points = 0
-final_points = 0
-total_points = 0
-wins_counter = 0
-for i in range(tournaments_number):
-    stage = input()
-    if stage == 'W':
-        points += 2000
-        wins_counter += 1
-    elif stage == 'F':
-        points += 1200
-    elif stage == 'SF':
-        points += 720
-    final_points += points
-    total_points = final_points + start_points
-    points = 0
-average_points = final_points // tournaments_number
-percent_of_wins = wins_counter / tournaments_number * 100
-print(f'Final points: {total_points}')
+number_of_tournaments = int(input())
+points = int(input())
+t_points = 0
+w_count = 0
+
+for i in range(number_of_tournaments):
+    stage_reached = input()
+    if stage_reached == 'W':
+        t_points += 2000
+        w_count += 1
+    elif stage_reached == 'F':
+        t_points += 1200
+    elif stage_reached == 'SF':
+        t_points += 720
+points += t_points
+average_points = t_points // number_of_tournaments
+percent_of_wins = w_count * 100 / number_of_tournaments
+
+print(f'Final points: {points}')
 print(f'Average points: {average_points}')
 print(f'{percent_of_wins:.2f}%')
