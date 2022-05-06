@@ -2,6 +2,7 @@ price = float(input())
 season = input()
 place = ''
 location = ''
+
 if price > 3000:
     place = 'Hotel'
     if season == 'Summer':
