@@ -1,19 +1,17 @@
-actor_name = input()
+name_of_the_actor = input()
 points = float(input())
-number_of_judges = int(input())
-judge_name = ''
-judge_points = 0
-is_nominee = False
-for i in range(number_of_judges):
+judges_number = int(input())
+nominee = False
+
+for i in range(judges_number):
     judge_name = input()
     judge_points = float(input())
     points += len(judge_name) * judge_points / 2
     if points > 1250.5:
-        is_nominee = True
+        nominee = True
         break
-diff = 1250.5 - points
-if is_nominee:
-    print(f'Congratulations, {actor_name} got a nominee for leading role with {points:.1f}!')
-else:
-    print(f'Sorry, {actor_name} you need {diff:.1f} more!')
 
+if nominee:
+    print(f'Congratulations, {name_of_the_actor} got a nominee for leading role with {points:.1f}!')
+else:
+    print(f'Sorry, {name_of_the_actor} you need {(1250.5 - points):.1f} more!')
