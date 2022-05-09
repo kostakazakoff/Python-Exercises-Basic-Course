@@ -34,11 +34,3 @@ print(f'Yellow balls: {count_yellow}')
 print(f'White balls: {count_white}')
 print(f'Other colors picked: {count_others}')
 print(f'Divides from black balls: {count_black}')
-
-# "Total points: {всичките събрани точки}"
-# "Red balls: {броят червени топки}"
-# "Orange balls: {броят оранжеви топки}"
-# "Yellow balls: {броят жълти топки}"
-# "White balls: {броят бели топки}"
-# "Other colors picked: {броят на избраните топки извън зададените цветове}"
-# "Divides from black balls: {броят на пътите, в които точките са били разделяни на 2}"
