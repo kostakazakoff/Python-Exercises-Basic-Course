@@ -1,6 +1,8 @@
-n = int(input())
+comparing_number = int(input())
+
 sum = 0
-for i in range(n):
+while sum < comparing_number:
     number = int(input())
     sum += number
+
 print(sum)

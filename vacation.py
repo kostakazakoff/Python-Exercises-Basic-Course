@@ -1,30 +1,27 @@
-price = float(input())
-season = input()
-place = ''
-location = ''
+needed_money = float(input())
+saved_money = float(input())
+days = 0
+spend_counter = 0
+she_spend_too_much = False
+while saved_money < needed_money:
+    action = input()
+    money_in_action = float(input())
+    days += 1
+    if action == 'spend':
+        spend_counter += 1
+        saved_money -=  money_in_action
+        if saved_money < 0:
+            saved_money = 0
+    if spend_counter == 5:
+        she_spend_too_much = True
+        break
+    if action == 'save':
+        spend_counter = 0
+        saved_money += money_in_action
 
-if price > 3000:
-    place = 'Hotel'
-    if season == 'Summer':
-        location = 'Alaska'
-    elif season == 'Winter':
-        location = 'Morocco'
-    price *= 0.9
-elif price > 1000:
-    place = 'Hut'
-    if season == 'Summer':
-        location = 'Alaska'
-        price *= 0.8
-    elif season == 'Winter':
-        location = 'Morocco'
-        price *= 0.6
+
+if she_spend_too_much:
+    print("You can't save the money.")
+    print(days)
 else:
-    place = 'Camp'
-    if season == 'Summer':
-        location = 'Alaska'
-        price *= 0.65
-    elif season == 'Winter':
-        location = 'Morocco'
-        price *= 0.45
-
-print(f'{location} - {place} - {price:.2f}')
+    print(f'You saved the money for {days} days.')
