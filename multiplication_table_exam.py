@@ -28,5 +28,5 @@ while want_to_play:
     # printing the number of right and wrong answers and defining the bool 'want_to_play':
     else:
         print()
-        print(f'You've got {right} right and {wrong} wrong answers.')
+        print(f'You\'ve got {right} right and {wrong} wrong answers.')
         want_to_play = False
