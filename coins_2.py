@@ -5,7 +5,7 @@ def change(money):
     for coin in coin_value:
         coins += money // coin
         money = money % coin
-        return coins
+    return coins
 
 m = float(input())
 result = change(m)
